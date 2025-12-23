@@ -6,9 +6,7 @@ import os
 from nltk.corpus import stopwords
 from nltk.stem.porter import PorterStemmer
 
-# ============================
-# Configure NLTK path
-# ============================
+
 nltk.data.path.append(os.path.expanduser("~/.nltk_data"))
 
 ps = PorterStemmer()
@@ -32,7 +30,7 @@ def transform_text(text):
     return " ".join(filtered_words)
 
 
-# Load model + vectorizer
+
 with open("vectorizer.pkl", "rb") as f:
     vectorizer = pickle.load(f)
 with open("model.pkl", "rb") as f:
