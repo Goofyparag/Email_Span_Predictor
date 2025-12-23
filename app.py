@@ -49,6 +49,6 @@ if st.button("Predict"):
         prediction = model.predict(vectorized_sms)[0]
 
         if prediction == 1:
-            st.error("🚨 SPAM Message Detected!")
+            st.error(" SPAM Message Detected!")
         else:
-            st.success("✔️ Not Spam (Ham).")
+            st.success("Not Spam (Ham).")
